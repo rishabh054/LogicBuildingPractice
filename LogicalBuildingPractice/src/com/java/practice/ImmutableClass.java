@@ -1,4 +1,4 @@
-package com.java.prep;
+package com.java.practice;
 
 import java.util.ArrayList;
 import java.util.List;

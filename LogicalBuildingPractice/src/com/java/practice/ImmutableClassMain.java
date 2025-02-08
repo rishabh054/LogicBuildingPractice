@@ -1,4 +1,6 @@
-package com.java.prep;
+package com.java.practice;
+
+import com.java.practice.ImmutableClass;
 
 import java.util.List;
 
