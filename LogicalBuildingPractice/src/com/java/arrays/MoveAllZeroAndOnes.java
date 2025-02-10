@@ -1,10 +1,10 @@
-package com.java.prep;
+package com.java.arrays;
 
 import java.util.Arrays;
 
 public class MoveAllZeroAndOnes {
     public static void main(String[] args) {
-        int[] array = {1,1,1,0,1,0,1,1,0,0,0,};
+        int[] array = {1,1,1,0,1,0,1,1,0,0,0,0};
         int left = 0;
         int right = array.length - 1;
         while(left <= right) {
