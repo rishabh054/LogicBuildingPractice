@@ -1,15 +1,16 @@
 package com.java.arrays;
 
-public class SubArrays {
+public class KadaneAlgorithm {
     public static void main(String[] args) {
-        int[] array = {3,-4,5,4,-1,7,-8};
+        int[] array = {-2,1,-3,4,-1,2,1,-5,4};
         int maxSum = Integer.MIN_VALUE;
+        int sum =0;
         for(int i=0; i < array.length;i++){
-            int sum =0;
-            for(int j=i;j<array.length;j++){
-                sum=sum+array[j];
+                sum=sum+array[i];
                 maxSum =Math.max(sum,maxSum);
-            }
+                if(sum < 0){
+                    sum = 0;
+                }
         }
         System.out.println("MaxSum = "+ maxSum);
     }
