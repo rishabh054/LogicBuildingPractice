@@ -11,6 +11,7 @@ public final class ImmutableClass {
     public ImmutableClass(String name, int rollNumber, List<String> subject) {
         this.name = name;
         this.rollNumber = rollNumber;
+        ArrayList<String> temp = new ArrayList<>(subject);
         this.subject = new ArrayList<>(subject);
     }
 

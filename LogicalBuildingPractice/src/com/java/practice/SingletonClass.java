@@ -2,12 +2,12 @@ package com.java.practice;
 
 public class SingletonClass {
 
-    private static volatile SingletonClass obj;
+    private static volatile SingletonClass obj = null;
 
     private SingletonClass() {
     }
 
-    private synchronized SingletonClass getInstance() {
+    private static SingletonClass getInstance() {
         if (obj == null) {
             synchronized (SingletonClass.class) {
                 if (obj == null) {

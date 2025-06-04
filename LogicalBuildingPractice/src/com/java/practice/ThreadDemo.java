@@ -2,7 +2,7 @@ package com.java.practice;
 
 class MultiThreadingUsingThread extends Thread{
     @Override
-    public  void run(){
+    public void run(){
         System.out.println("1 Current Thread :" + Thread.currentThread().getName());
     }
 }

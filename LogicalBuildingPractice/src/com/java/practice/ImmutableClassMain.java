@@ -11,6 +11,10 @@ public class ImmutableClassMain {
         System.out.println("Roll Number = " + obj.getRollNumber());
         System.out.println("Subject  = " + obj.getSubject());
 
+        obj = new ImmutableClass("Rishabh1", 1, List.of("math, English"));
+        System.out.println("Name = " + obj.getName());
+        System.out.println("Roll Number = " + obj.getRollNumber());
+        System.out.println("Subject  = " + obj.getSubject());
     }
 
 

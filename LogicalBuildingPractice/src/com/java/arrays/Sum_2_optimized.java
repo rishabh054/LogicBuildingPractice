@@ -1,19 +1,26 @@
 package com.java.arrays;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Sum_2_optimized {
     public static void main(String[] args) {
-        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         int target = 10;
-        HashMap<Integer, Integer> hashMap = new HashMap<>();
-        for (int i = 0; i < array.length; i++) {
-            int diff = target - array[i];
-            if (hashMap.containsKey(diff)) {
-                System.out.println(diff + " and " + array[i]);
+        System.out.println(Arrays.toString(twoSum(nums, target)));
+    }
+
+    public static int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int rem = target - nums[i];
+            if (map.containsKey(rem)) {
+                return new int[]{map.get(rem), i};
             } else {
-                hashMap.put(array[i], i);
+                map.put(nums[i], i);
             }
         }
+        return new int[]{};
     }
 }
