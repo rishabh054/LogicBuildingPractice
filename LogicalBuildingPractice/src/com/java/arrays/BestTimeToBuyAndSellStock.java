@@ -10,7 +10,7 @@ package com.java.arrays;
  Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.**/
 public class BestTimeToBuyAndSellStock {
     public static void main(String[] args) {
-        int[] arr = {7,5,3,6,4,9};
+        int[] arr = {7,1,5,3,6,4};
         int minPrice = arr[0];
         int maxProfit = 0;
         for(int i=0;i<arr.length;i++){

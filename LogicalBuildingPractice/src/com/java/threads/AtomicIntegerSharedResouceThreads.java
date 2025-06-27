@@ -3,8 +3,8 @@ package com.java.threads;
 public class AtomicIntegerSharedResouceThreads {
     public static void main(String[] args) throws InterruptedException {
         AtomicIntegerSharedResource c = new AtomicIntegerSharedResource();
-        Thread t1 = new Thread(() -> {
-            for (int i = 1; i <= 1200; i++) {
+        Thread t1 = new Thread(()->{
+            for(int i=0;i<1200;i++){
                 c.increaseCount();
             }
         });

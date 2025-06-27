@@ -4,13 +4,17 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Test {
     public static void main(String[] args) {
-        List<Integer> list = List.of(1,22,3,4,5,6,7,8,9);
-        Optional<Integer> i = list.stream().max(Comparator.comparing(Integer::intValue));
-        System.out.println(i);
-    };
+        ExecutorService ex = Executors.newFixedThreadPool(3);
+        for(int i=0;i<10;i++){
+            ex.submit(()-> System.out.println("Running"+ Thread.currentThread().getName()));
+        }
+        ex.shutdown();
+    }
 }

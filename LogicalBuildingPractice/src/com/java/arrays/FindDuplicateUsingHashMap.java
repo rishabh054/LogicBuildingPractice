@@ -17,7 +17,7 @@ public class FindDuplicateUsingHashMap {
         HashMap<Integer, Integer> hashMap = new HashMap<>();
 
         for (int i = 0; i < array.length; i++) {
-            hashMap.put(array[i], hashMap.getOrDefault(array[i], 0) + 1);
+            hashMap.put(array[i],hashMap.getOrDefault(array[i],0)+1);
         }
         for (Map.Entry<Integer, Integer> entry : hashMap.entrySet()) {
             if (entry.getValue() > 1) {

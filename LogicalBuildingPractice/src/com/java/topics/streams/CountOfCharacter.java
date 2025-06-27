@@ -10,9 +10,9 @@ public class CountOfCharacter {
         String s = "rishabh kumar singh";
 
         Map<Character, Long> t = s.chars()
-                .mapToObj(c->(char)c)
-                .filter(c->Character.isAlphabetic(c))
-                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+                .mapToObj(c->(char) c)
+                .filter(t1 ->Character.isAlphabetic(t1))
+                .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 
         System.out.println(t);
     }
